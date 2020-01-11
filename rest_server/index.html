@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Books Frontend</title>
+    <style>
+        table, tr, th, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: #ccc;
+        }
+        form {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="createBookForm" method="POST">
+        <p><input type="text" name="title" placeholder="title"></p>
+        <p><input type="text" name="author" placeholder="author"></p>
+        <p><input type="text" name="isbn" placeholder="isbn"></p>
+        <p><input type="text" name="publisher" placeholder="publisher"></p>
+        <select name="genre" required="">
+            <option value="">---------</option>
+            <option value="1">Romans</option>
+            <option value="2">Obyczajowa</option>
+            <option value="3">Sci-fi i fantasy</option>
+            <option value="4">Literatura faktu</option>
+            <option value="5">Popularnonaukowa</option>
+            <option value="6">Poradnik</option>
+            <option value="7">Kryminał, sensacja</option>
+        </select>
+        <input type="submit"/>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
